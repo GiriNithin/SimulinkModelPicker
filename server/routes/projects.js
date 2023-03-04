@@ -12,6 +12,7 @@ router.route("/").get(async (req, res) => {
   }
 });
 router.route("/:projectName").get(async (req, res) => {
+  console.log(req.params.projectName);
   try {
     const projectsInformation = await projects.getProjectsByName(
       req.params.projectName
